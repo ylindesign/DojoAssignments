@@ -1,0 +1,35 @@
+Meow:DojoAssignments Yu$ ls -R
+ios			netCore			ruby
+mean			python			web.Fundamentals
+
+./ios:
+about.txt
+
+./mean:
+about.txt
+
+./netCore:
+about.txt
+
+./python:
+about.txt
+
+./ruby:
+about.txt
+
+./web.Fundamentals:
+css		git		html		javascript
+
+./web.Fundamentals/css:
+about.txt
+
+./web.Fundamentals/git:
+about.txt
+
+./web.Fundamentals/html:
+about.txt			indentation1_YuLin.html
+commands_YuLin.txt		indentation2_YuLin.html
+fakeBlog_YuLin.html		registrationForm_YuLin.html
+
+./web.Fundamentals/javascript:
+about.txt

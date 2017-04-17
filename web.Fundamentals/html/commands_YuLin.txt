@@ -1,0 +1,11 @@
+cd Desktop
+cd ..
+mdkir test
+touch index.html
+touch style.css
+touch commands.txt
+cp newFile.html newFile2.html
+rm index.html
+mkdir destination
+mv newFile2.html ../destination
+rm -rf destination
