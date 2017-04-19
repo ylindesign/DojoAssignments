@@ -4,3 +4,12 @@ cd DojoAssignments
 git init
 git add .
 git commit -m "Initial commiting whole DojoAssignments"
+git remote add origin https://github.com/ylindesign/DojoAssignments.git
+git push -u origin master
+ylindesign
+"password"
+touch readme.txt
+git status
+git add .
+git commit -m "added readme.txt"
+git push
