@@ -21,25 +21,26 @@
 }
 
 #header {
-	width: 970px;
+	width: 960px;
 	height: 300px;
+	margin: 0 auto;
 	text-align: center;
-	padding: 20px;
+	padding: 10px;
 }
 
 	.headerContent {
-		width: 450px;
+		width: 425px;
 		height: 250px;
-		margin: 0 auto;
-		background-color: black;
+		margin: 10px 25px;
+		background: linear-gradient(to right, #fefefe, #dacbd9);
 		display: inline-block;
+		vertical-align: top;
 	}
 
 #content {
 	width: 1000px;
 	margin: 0 auto;
-	background-color: green;
-	padding: 0 auto;
+	padding-bottom: 15px;
 	text-align:  center;
 
 }
@@ -56,19 +57,22 @@
 
 #footer {
 	width: 1000px;
-	height: 400px;
-	background: linear-gradient(red, blue);
+	height: 100px;
+	background-color: #f8f8f8;
+	text-align: center;
 
 }
 
-.text {
+p.text {
 	width: auto;
 	height: 175px;
-	padding-top: 10px;
+	padding: 10px 15px;
+	text-align: left;
 }
 
 .center {
 	text-align: left;
+	padding-left: 15px;
 }
 
 .icon {
@@ -86,10 +90,27 @@
 	border: 1px solid black;
 	border-radius: 5px;
 	display: inline-block;
+	box-shadow: 2px 2px 5px #666666;
+}
+
+.border {
+	border: 5px solid #c0c0c0;
+}
+
+.social {
+	width: 15px;
+	height: 15px;
 }
 
 h1 {
-	font-family: sans-serif;
+	font-family: monospace;
+	display: inline-block;
+}
+
+h2 {
+	display: inline-block;
+	text-align: right;
+	float: right;
 }
 
 h3, h4 {
@@ -100,11 +121,11 @@ h3, h4 {
 	text-align: left;
 }
 
-p {
+/*p .text {
 	font-family: sans-serif;
 	padding: 15px;
 	text-align: left;
-}
+}*/
 
 img {
 	width: 100%;

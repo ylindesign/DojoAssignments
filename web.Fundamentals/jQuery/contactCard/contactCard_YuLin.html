@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var n = 1;
+			// $(document).on("click", "button", function() {
+			// 	var first = $('#firstName').val();
+			// 	var last = $('#lastName').val();
+			// 	var name = "<h3>" + first + " " + last;
+			// 	var descrip = "<h2>" +  $('#textArea').val(); + "<h2>";
+			// 	var myClass = "card" //+ n;
+			// 	var div = "<div>" + name + "<h4>Click for Description</h4></div>"
+			// 	$('#cardBar').append( $(div).addClass(myClass) );
+			// 	n++;
+			// });
+
+			// $(document).on("click", "button", function() {
+			// 	var first = $('#firstName').val();
+			// 	var last = $('#lastName').val();
+			// 	var name = "<h3>" + first + " " + last + "</h3>";
+			// 	var des = "<h2>" +  $('#textArea').val() + "</h2>";
+			// 	var myClass = "card" + n;
+			// 	var div = "<div>" + name + "<h4>Click for Description</h4></div>"
+			// 	$('#cardBar').append( $(div).addClass(myClass).addClass("card").append( $(des).hide() ) );
+			// 	//$('#cardBar').append( $(descrip).hide() );
+			// 	n++;
+			// });
+
+			$(document).on("click", "button", function() {
+				var first = $('#firstName').val();
+				var last = $('#lastName').val();
+				var name = "<h3>" + first + " " + last + "</h3>";
+				var des = "<h5>" +  $('#textArea').val() + "</h5>";
+				var div = "<div>" + name + "<h4>Click for Description</h4></div>"
+				$('#cardBar').append( $(div).addClass("card").append( $(des).hide() ) );
+				//$('#cardBar').append( $(descrip).hide() );
+				n++;
+			});
+
+			
+			$(document).on("click", '.card', function(event) {
+				event.stopPropagation();
+				$(this).children().hide();
+				$(this).children("h5").show();
+			});
+			
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="formSection">
+			<h1>Add User</h1>
+			<hr>
+			First Name: <input type="text" id="firstName" placeholder="First Name">
+			<br>
+			Last Name: <input type="text" id="lastName" placeholder="Last Name">
+			<br>
+			Description: <textarea id="textArea">Enter your description</textarea>
+			<button type="submit">Add User</button>
+		</div>
+		<div id="cardBar">
+			
+		</div>
+		
+	</div>
+</body>
+</html>

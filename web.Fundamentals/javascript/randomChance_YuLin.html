@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Chance</title>
+	<script type="text/javascript">
+		"use strict";
+		var coins = 100;
+		var chance = 0;
+		function play() {
+			while (coins > 0) {
+				coins--;
+				chance = Math.floor(Math.random() * 100);
+				if (chance === 0) {
+					coins += Math.floor(Math.random() * 50) + 50;
+					console.log(coins);
+				}
+			} 
+        	`if (coins <= 0) {
+				console.log(coins);
+			}
+		}
+		play();
+	</script>
+</head>
+</html>

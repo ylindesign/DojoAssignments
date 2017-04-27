@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Functions</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.clickButton').click(function() {
+  				alert("Handler for .click() called.");
+  			});
+
+  			$('.hideButton').click(function() {
+  				$('.hide').hide();
+  			});
+
+  			$('.show').hide();
+  			$('.showButton').click(function() {
+  				$('.show').show();
+  			});
+
+  			$('.toggleButton').click(function() {
+  				$('.toggle').toggle();
+  			});
+
+  			$('.slideDown').hide();
+  			$('.slideDownButton').click(function() {
+  				$('.slideDown').slideDown();
+  			});
+
+  			$('.slideUpButton').click(function() {
+  				$('.slideUp').slideUp();
+  			});
+
+  			$('.slideToggleButton').click(function() {
+  				$('.slideToggle').slideToggle();
+  			});
+
+  			$('.fadeIn').hide();
+  			$('.fadeInButton').click(function() {
+  				$('.fadeIn').fadeIn();
+  			});
+
+  			$('.fadeOutButton').click(function() {
+  				$('.fadeOut').fadeOut();
+  			});
+
+  			$('.addClassButton').click(function() {
+  				$('.addClass').addClass("red");
+  			});
+
+  			$('.beforeButton').click(function() {
+  				$('.before').before("<p>Red, White and Blue<p>");
+  			});
+
+  			$('.afterButton').click(function() {
+  				$('.after').after("<p>I'm a porpoise<p>");
+  			});
+
+  			$('.appendButton').click(function() {
+  				$('.append').append("<strong> Word<strong>");
+  			});
+
+  			$('.htmlButton').click(function() {
+  				$('.html').html("<p>This is the new paragraph from .html jQuery.</p>");
+  			});
+
+  			$('.attrButton').click(function() {
+  				var attribute = $('.secretAttribute').attr("class");
+  				$('.secretAttribute').append("<strong> " + attribute + "</strong>");
+  			});
+
+  			$('.valButton').click(function() {
+  				var value = $('.valButton').val();
+  				$('.val').append("<strong> " + value + "</strong>");
+  			});
+
+  			$('.textButton').click(function() {
+  				var words = $('.textButton').text();
+  				$('.text').text(words);
+  			});
+
+  			$('.dataButton').click(function() {
+				var changeData = $('.data').data("paragraph");
+				$('.data').append("<strong> " + changeData + "</strong>");
+  			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="sections">
+			<button class="clickButton">.click</button>
+			<div class="event">
+				<h1>.click</h1>
+				<p>Click the button to launch an alert().</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="hideButton">.hide</button>
+			<div class="event">
+				<h1>.hide</h1>
+				<p class="hide">Click the button to hide this paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="showButton">.show</button>
+			<div class="event">
+				<h1>.show</h1>
+				<p class="show">This paragraph is now shown.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="toggleButton">.toggle</button>
+			<div class="event">
+				<h1>.toggle</h1>
+				<p class="toggle">Click the button to toggle this paragraph on or off.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="slideDownButton">.slideDown</button>
+			<div class="event">
+				<h1>.slideDown</h1>
+				<p class="slideDown">This paragraph is now slide down.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="slideUpButton">.slideUp</button>
+			<div class="event">
+				<h1>.slideUp</h1>
+				<p class="slideUp">Click the button to slide this paragraph up.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="slideToggleButton">.slideToggle</button>
+			<div class="event">
+				<h1>.slideToggle</h1>
+				<p class="slideToggle">Click the button to toggle this paragraph up.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="fadeInButton">.fadeIn</button>
+			<div class="event">
+				<h1>.fadeIn</h1>
+				<p class="fadeIn">This paragraph has now faded in.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="fadeOutButton">.fadeOut</button>
+			<div class="event">
+				<h1>.fadeOut</h1>
+				<p class="fadeOut">This paragraph has now faded in.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="addClassButton">.addClass</button>
+			<div class="event">
+				<h1>.addClass</h1>
+				<p class="addClass">Click the button to add the red font .class to this paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="beforeButton">.before</button>
+			<div class="event">
+				<h1>.before</h1>
+				<p class="before">These are the colors to the American flag.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="afterButton">.after</button>
+			<div class="event">
+				<h1>.after</h1>
+				<p class="after">What did the porpoise say to the dolphin?</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="appendButton">.append</button>
+			<div class="event">
+				<h1>.append</h1>
+				<p class="append">Click the button to add a word at the end of this paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="htmlButton">.html</button>
+			<div class="event">
+				<h1>.html</h1>
+				<p class="html">Click the button to change the paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="attrButton">.attr</button>
+			<div class="event">
+				<h1>.attr</h1>
+				<p class="secretAttribute">Click the button to see the attribute of this paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="valButton" value="Reveal">.val</button>
+			<div class="event">
+				<h1>.val</h1>
+				<p class="val">Click the button to see the value of this paragraph.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="textButton">.text</button>
+			<div class="event">
+				<h1>.text</h1>
+				<p class="text">Click the button to change the text of this paragraph to the title.</p>
+			</div>
+		</div>
+		<div class="sections">
+			<button class="dataButton">.data</button>
+			<div class="event">
+				<h1>.data</h1>
+				<p class="data">Click the button to get the data of this paragraph.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

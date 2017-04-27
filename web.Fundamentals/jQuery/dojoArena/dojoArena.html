@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Arena</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('select#left').hide();
+			$('select#right').hide();
+
+			$('button').click(function(){
+				var back = "url(images/" + $(this).text() + ".jpg)";
+				$('#bg').css("background-image", back);
+				$('button').hide();
+				$('h1').text("Select Players");
+				$('.buttonGroup').append("<p>hi</p>")
+				$('select#left').show();
+				$('select#right').show();
+			})
+
+			$('select#left').change(function(){
+				var p1 = "url(images/" + $(this).val() + ".png)";
+				//alert(p1);
+				$('#leftChar').css("background-image", p1);
+			})
+
+			$('select#right').change(function(){
+				var p1 = "url(images/" + $(this).val() + ".png)";
+				//alert(p1);
+				$('#rightChar').css("background-image", p1);
+			})
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="bg">
+		<div id="wrapper">
+			<div id="buttonGroup">
+				<h1>Select Arena</h1>
+				<button>beach</button>
+				<button>earth</button>
+				<button>dojo</button>
+				<button>forest</button>
+				<button>matrix</button>
+				<button>snow</button>
+				<select id="left">
+					<option disabled selected>Select Ninja</option>
+					<option>mikey</option>
+					<option>donny</option>
+					<option>raphael</option>
+					<option>leo</option>
+				</select>
+				<select id="right">
+					<option disabled selected>Select Ninja</option>
+					<option>mikey</option>
+					<option>donny</option>
+					<option>raphael</option>
+					<option>leo</option>
+				</select>
+			</div>
+			<div id="characters">
+				<div id="leftChar">
+					
+				</div>
+				<div id="rightChar">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 970px;
+	height: auto;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+
+#header {
+	width: auto;
+	height: 140px;
+}
+	#header img {
+		width: 100px;
+		height: auto;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	h1 {
+		padding: 5px;
+		font-size: 40px;
+		font-weight: 400;
+		color: #474747;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	h2 {
+		padding: 15px 20px;
+		font-size: 30px;
+		font-weight: 100;
+		color: #ffffff;
+		background: linear-gradient(#246699, #5384a8, #246699);
+		position: relative;
+		top: -20px;
+		z-index: -1;
+	}
+
+.blueText {
+	color: #236699;
+}
+
+.redText {
+	color: #da1f26;
+}
+
+#mainBody {
+	width: 970px;
+	background: linear-gradient(#e4e4e4, #ffffff, #ffffff);
+}
+
+	#sideBar {
+		width: 200px;
+		height: 500px;
+		padding-top: 30px;
+		padding-left: 5px;
+		display: inline-block;
+	}
+
+		.sideTitle {
+			font-size: 18px;
+			font-weight: 900;
+		}
+
+		.sideText {
+			font-size: 14px;
+			font-weight: 900;
+		}
+
+		#watchVideo {
+			width: 180px;
+			height: 40px;
+			margin: 5px auto;
+			padding: : 4px auto;
+			background: linear-gradient(#5d94bc, #2c6c9e);
+			border-radius: 5px;
+			display: block;
+		}
+
+		#moreResources {
+			width: 180px;
+			height: 40px;
+			margin: 5px auto 20px;
+			padding: : 4px auto;
+			background: linear-gradient(#eaaa62, #f0721a);
+			border-radius: 5px;
+			display: block;
+		}
+
+		.buttonText {
+			color: #ffffff;
+			font-size: 15px;
+		}
+
+		.ad {
+			position: relative;
+		}
+
+			.adPieces {
+				width: 100%;
+				position: absolute;
+				left: 0;
+				text-align: center;
+			}
+
+			.adText {
+				color: #ffffff;
+				font-size: 25px;
+				font-weight: 200;
+				top: 20px;
+			}
+
+			.adNinja {
+				top: 35%;
+			}
+
+			.adButton {
+				width: 180px;
+				height: 40px;
+				margin: 5px auto 20px;
+				background: linear-gradient(#6ccedc, #00c0db);
+				border-radius: 5px;
+				display: inline-block; 
+				top: 80%;
+				left: 10px;
+				border: none;
+			}
+
+			img.adPieces {
+				width: 90px;
+				left: 50px;
+			}
+
+			.backgroundImg {
+				width: 100%;
+			}
+
+	#mainContent {
+		width: 740px;
+		height: 500px;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		left: 26px;
+	}
+
+		#mainTop {
+			width: 735px;
+			height: 500px;
+		}

@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 600px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+#navBar {
+	width: 600px;
+	height: 25px;
+	margin: 50px auto;
+	padding: 5px;
+	text-align: left;
+	border: 1px solid #000000;
+}
+	
+	.navFirst {
+		width: 125px;
+		display: inline-block;
+	}
+
+	.navLast {
+		width: 125px;
+		display: inline-block;
+	}
+
+	.navEmail {
+		width: 125px;
+		display: inline-block;
+	}
+
+	.navContact {
+		width: 125px;
+		display: inline-block;
+	}
+
+#formSection {
+	width: 300px;
+	height: 600px;
+	margin: 0 auto;
+	text-align: right;
+}
+	
+	#formSection h1 {
+		text-align: left;
+	}
+
+	input {
+		margin: 10px 0;
+	}
+
+	button {
+		padding: 5px;
+	}

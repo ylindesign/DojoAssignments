@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Range Print</title>
+	<script type="text/javascript">
+		
+		function printRange(start, end, skip) {
+			for (var i = start; i < end; i += skip){
+				if (start > end){
+            		break;
+            	}
+            	console.log(start);
+				start += skip;
+			}
+		}
+
+		printRange(2, 10, 2);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
