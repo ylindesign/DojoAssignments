@@ -1,0 +1,3 @@
+https://github.com/ylindesign/DojoAssignments.git
+
+web.Fundamentals > jQuery > contactCard

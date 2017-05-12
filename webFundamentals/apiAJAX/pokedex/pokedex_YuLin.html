@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			// for (var i = 1; i < 152; i++) {
+			// 	//$('#pokemon').append('<img src="' + 'http://pokeapi.co/media/img/' + i + '.png"></button>');
+			// 	var poke = 'http://pokeapi.co/media/img/' + i;
+			// 	$('#container').append( $('button').css('background-image', poke) );
+			// }
+
+			////
+
+			$("#container").on("click", ".poke-btn", function(){
+			    MorePokeInfo($(this).attr("data-id"))
+			})
+
+		    for(var i = 1; i <= 151; i++){
+		        $.get("http://pokeapi.co/api/v2/pokemon/" + i, function(res){
+		            RenderThePokemon(res.sprites.front_default, res.id);
+		        })
+		    }
+			
+			function RenderThePokemon(src, id){
+			    var pokeButton = document.createElement('button');
+			    pokeButton.setAttribute("class", "poke-btn");
+			    pokeButton.setAttribute("data-id", id);
+			    $(pokeButton).append("<img src='" + src + "' alt=''>");
+			    $('#container').append(pokeButton);
+			}
+
+
+
+			function MorePokeInfo(id){
+			    $.get("http://pokeapi.co/api/v2/pokemon/" + id, function(res){
+			        console.log(res);
+			        var name = res.forms[0].name;
+			        var src = res.sprites.front_default;
+			        var type = '';
+			        for (var i = 0; i < res.types.length; i++) {
+			        	type += '<li>' + res.types[i].type.name + '</li>';
+			        }
+			        var height = res.height;
+			        var weight = res.weight;
+			        //res.types[0].type.name;
+
+			        var pokeName = '<h1>' + name + '</h1>';
+			        var pokeImg = '<img src="' + src + '" alt="">';
+			        var pokeType = '<h3>Types</h3>' + '<p><ul>' + type + '</ul></p>';
+			        var pokeHeight = '<h3>Height</h3>' + '<p>' + height + '</p>';
+			        var pokeWeight = '<h3>Weight</h3>' + '<p>' + weight + '</p>';
+			        var info = pokeName + pokeImg + pokeType + '<br>' + pokeHeight + '<br>' + pokeWeight;
+			        $('#infoFrame').html(info); 
+			        
+			        // build an ul from array (moves)
+
+			        // build an h2 (weight)
+			    })
+			}
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="container">
+			
+		</div>
+		<div id="pokedex">
+			<div id="infoFrame">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+pip list
+	List installed packages, including editables.
+	Packages are listed in a case-insensitive sorted order.
+
+install Django (2nd time)
+	usage: install [-bCcpSsv] [-B suffix] [-f flags] [-g group] [-m mode]
+               [-o owner] file1 file2
+       install [-bCcpSsv] [-B suffix] [-f flags] [-g group] [-m mode]
+               [-o owner] file1 ... fileN directory
+       install -d [-v] [-g group] [-m mode] [-o owner] directory ...
+
+pip freeze
+	removes the () and adds a == between the application and its version
+
+pip pip freeze > requirements.txt
+	After doing ls, I can see a requirements.txt in my Desktop on the Terminal
+
+pip uninstall Django
+	A huge list of files are shown, and it's followed by a message if I wanted to proceed (y/n)
+
+pip show Django
+	Name: Django
+	Version: 1.11
+	Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+	Home-page: https://www.djangoproject.com/
+	Author: Django Software Foundation
+	Author-email: foundation@djangoproject.com
+	License: BSD
+	Location: /usr/local/lib/python2.7/site-packages
+	Requires: pytz
+
+pip search Flask
+	A huge 2 column list is shown in the Terminal.

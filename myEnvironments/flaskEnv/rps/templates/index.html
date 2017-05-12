@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock, Paper, Scissors</title>
+</head>
+<body>
+	<p>Won: {{ won }}</p>
+	<p>Loss: {{ loss }}</p>
+	<p>Tie: {{ tie }}</p>
+
+	<form action='/results' method='post'>
+        Name: <input type='text' name='name'>
+        <input type='submit' value='create user'>
+    </form>
+
+	<h3>{{session['name']}}</h3>
+    <h3>{{session['email']}}</h3>
+</body>
+</html>
