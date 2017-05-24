@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja Gold</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		#wrapper {
+			width: 900px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.building {
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			background-color: #E6E7E8;
+			color: #000000;
+			text-align: center;
+			display: inline-block;
+		}
+
+		#activities {
+			margin: 0 auto;
+			width: 700px;
+			height: 200px;
+			background-color: #E6E7E8;
+			color: #ffffff;
+			text-align: center;
+			overflow: scroll;
+
+		}
+
+		.activities{
+			width: 720px;
+			height: 150px;
+		}
+		.lost{
+			color: red;
+		}
+		.gain{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<p>Your Gold: {{request.session.gold}}</p>
+		<div class="building">
+			<h2>Farm</h2>
+			<p>(earns 10-20 gold)</p>
+			<form action="/process_money" method="post">
+			{% csrf_token %}
+				<input type="hidden" name="building" value="farm" />
+				<input type="submit" value="Find Gold!"/>
+			</form>
+		</div>
+		<div class="building">
+			<h2>Cave</h2>
+			<p>(earns 5-10 golds)</p>
+			<form action="/process_money" method="post">
+			{% csrf_token %}
+				<input type="hidden" name="building" value="cave" />
+				<input type="submit" value="Find Gold!"/>
+			</form>
+		</div>
+		<div class="building">
+			<h2>House</h2>
+			<p>(earns 2-5 golds)</p>
+			<form action="/process_money" method="post">
+			{% csrf_token %}
+				<input type="hidden" name="building" value="house" />
+				<input type="submit" value="Find Gold!"/>
+			</form>
+		</div>
+		<div class="building">
+			<h2>Casino</h2>
+			<p>(earns/lose 0-50 gold)</p>
+			<form action="/process_money" method="post">
+			{% csrf_token %}
+				<input type="hidden" name="building" value="casino" />
+				<input type="submit" value="Find Gold!"/>
+			</form>
+		</div>
+		
+		<br><br><br>
+		<div id="activities">
+			<h2>Activities</h2>
+			{% for activity in request.session.activities %}
+                <!-- {% for message in activity %} -->
+                    <p class={{ activity.class }}>{{ activity.activity }}</p>
+                <!-- {% endfor %} -->
+            {% endfor %}
+			
+		</div>
+
+		<form action="/reset" method="post">
+			<input type="submit" name="reset">
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+

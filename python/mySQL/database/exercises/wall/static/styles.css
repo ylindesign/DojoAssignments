@@ -1,0 +1,20 @@
+.main_content {
+	width: 800px;
+	font-family: sans-serif;
+}
+
+fieldset {
+	display: inline-block;
+	vertical-align: top;
+	width: 275px;
+	height: 150px;
+}
+
+label {
+	display: block;
+}
+
+textarea {
+	width: 60%;
+	height: 50px;
+}

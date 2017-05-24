@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen" title="no title">
+  </head>
+  <body>
+    <center>
+    <div class="main_content">
+      <h1>CodingDojo Wall</h1>
+      {{ session['user_id'] }}
+      {{ session['first_name'] }}
+      <form class="" action="/logout" method="post">
+        <input type="submit" name="" value="Logout">
+      </form>
+
+      <p>Post a message</p>
+      <form action="/postm" method="post">
+        <label for="message">
+          <textarea placeholder="Write a message!" name="message"></textarea>
+        </label>
+        <br>
+        <input type="submit" name="" value="Post a Message">
+      </form>
+        {% for message in messages %}
+            {{ message['message'] }}
+        {% endfor %}
+      <table>
+        <tr>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </center>
+  </body>
+</html>

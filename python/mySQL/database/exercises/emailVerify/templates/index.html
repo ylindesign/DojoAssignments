@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Verify</title>
+	<style type="text/css">
+		* {
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<tr>
+						<td>
+							{{message}}
+						</td>
+					</tr>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		<form action="/process" method="post">
+			Email Address: <input type="text" name="email">
+			<input type="submit" name="submit">
+			
+		</form>
+		<table>
+			<tr>
+			<th>
+				Email Address
+			</th>
+		</tr>
+		{% for info in emails %}
+			<tr>
+				<td>
+					{{ info['email'] }}
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+		
+	</center>
+</body>
+</html>

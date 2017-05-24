@@ -1,0 +1,103 @@
+Django Process
+
+1. django-admin startproject projectname
+
+2. cd projectname
+
+3. mkdir apps
+
+4. cd apps
+
+5. touch __init__.py
+
+6. python ../manage.py startapp appname
+
+7. projname/projname/settings.py
+	INSTALLED_APPS = [
+		'apps.appname',
+		]
+
+8. projname/projname/urls.py
+	urlpatterns = [
+		url(r'^', include('apps.appname.urls'))
+		]
+
+9. projname/appname:
+	touch urls.py
+  
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index)
+]
+
+***when you add more links for clients, add to urlpatterns (example):
+	url(r'^users$', views.show)  
+	-->local:8000/users)
+	-->views.show (refers to views.py: def show(request)
+
+
+10. apps/appname/views.py
+from django.shortcuts import render, HttpResponse
+
+def index(request):
+	return render(request, 'appname/index.html')
+
+***apps/appname/templates/appname/index.html
+
+11. appname/templates/appname/index.html
+	--> Linking CSS file
+	{% load staticfiles %}
+	      <!-- The line above tells Django to be ready to listen for static files -->
+	      <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+	      --->
+
+python manage.py migrate
+python manage.py runserver
+"localhost:8000"
+__________________
+
+FORMS
+index.html
+<form action="/new_user" method="post">
+	{% csrf_token %}
+	<input type="text" name="first_name">
+	<input type="submit" value="submit">
+</form>
+
+./appname/views.py
+from django.shortcuts import render, redirect
+def create(request):
+	if request.method == "POST":
+	#stuff
+	return ..
+
+SESSION
+> python manage.py makemigrations
+> python manage.py migrate
+
+./appname/views.py
+request.session['name'] = request.POST['first_name']
+
+HTML
+{{request.session.name}}
+
+Useful session methods:
+	request.session['key']
+		This will retrieve (get) the value stored in key
+	request.session['key'] = 'value'
+		Set the value that will be stored by key
+	del request.session['key']
+		Deletes a session key if it exists, throws a keyError if it doesn’t. Use along with try and except since it’s better to ask for forgiveness than permission
+	'key' in request.session
+		Returns a boolean of whether a key is in session or not
+	{{ request.session.name }}
+		Use dot notation (.) to access request.session keys from templates since square brackets ([]) aren’t allowed there
+
+Linking CSS Files
+<!-- Inside apps/appname/templates/first_app/index.html -->
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'first_app/css/styles.css' %}">
+  <script src="{% static 'first_app/js/main.js' %}" > </script>
+

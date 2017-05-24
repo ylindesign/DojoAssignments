@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Surprise!</title>
+</head>
+<body>
+	<h1>Surprise Me!</h1>
+	<form action="/results" method="post">
+	{% csrf_token %}
+	Pick a number: <input type="number" name="user">
+	<input type="submit" value="Ready">
+
+	{{ request.session.user }}
+</form>
+</body>
+</html>

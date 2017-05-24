@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Showing</title>
+</head>
+<body>
+	<h1>Here are your results!</h1>
+
+	{% for x in request.session.new %}
+	<p>{{ x }}</p>
+	{% endfor %}
+</body>
+</html>

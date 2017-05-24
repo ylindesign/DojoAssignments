@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	{% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<center>
+	<h1>Home Page</h1>
+	<a href="/projects">Projects</a>
+	<a href="/about">About</a>
+	<a href="/testimonials">Testimonials</a>
+		
+	</center>
+</body>
+</html>

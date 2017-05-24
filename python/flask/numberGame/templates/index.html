@@ -6,9 +6,39 @@
 		* {
 			margin: 0;
 			padding: 0;
+			font-family: sans-serif;
 		}
 		#wrapper {
+			width: 900px;
 			margin: 0 auto;
+			text-align: center;
+		}
+
+		.tooHigh {
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			background-color: #D46A6A;
+			color: #ffffff;
+			text-align: center;
+		}
+
+		.tooLow {
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			background-color: #4A6B8A;
+			color: #ffffff;
+			text-align: center;
+		}
+
+		.correct {
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			background-color: #4A6B8A;
+			color: #ffffff;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -17,6 +47,32 @@
 		<h1>Welcome to the Great Number Game!</h1>
 		<p>I am thinking of a number between 1 and 100</p>
 		<p>Take a guess!</p>
+		<p>This is the number {{ session['random'] }}</p>
+		<p>Your last guess: {{ session['guess'] }}</p>
+
+		{% if "guess" not in session %}
+			<div></div>
+		{% elif session['guess'] > session['random'] %}
+			<div class="tooHigh">
+				<h1>Too High!</h1>
+			</div>
+		{% elif session['guess'] < session['random'] %}
+			<div class="tooLow">
+				<h1>Too Low!</h1>
+			</div>
+		{% elif session['guess'] == session['random'] %}
+			<div class="correct">
+				<h1>You Got it!!</h1>
+				<form action="/reset" method="post">
+					<input type="submit" name="reset" value="Reset">
+				</form>	
+			</div>
+		{% endif %}
+
+		<form action="/guess" method="post">
+			<input type="text" name="guess">
+			<input type="submit" name="makeGuess">
+		</form>
 	</div>
 </body>
 </html>
