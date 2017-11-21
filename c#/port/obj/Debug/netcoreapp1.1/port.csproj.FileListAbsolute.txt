@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/bin/Debug/netcoreapp1.1/port.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/bin/Debug/netcoreapp1.1/port.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/bin/Debug/netcoreapp1.1/port.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/bin/Debug/netcoreapp1.1/port.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/bin/Debug/netcoreapp1.1/port.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/obj/Debug/netcoreapp1.1/port.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/obj/Debug/netcoreapp1.1/port.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/port/obj/Debug/netcoreapp1.1/port.pdb

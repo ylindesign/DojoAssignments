@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/bin/Debug/netcoreapp1.1/LinqSkeleton.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/bin/Debug/netcoreapp1.1/LinqSkeleton.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/bin/Debug/netcoreapp1.1/LinqSkeleton.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/obj/Debug/netcoreapp1.1/LinqSkeleton.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/bin/Debug/netcoreapp1.1/LinqSkeleton.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/bin/Debug/netcoreapp1.1/LinqSkeleton.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/obj/Debug/netcoreapp1.1/LinqSkeleton.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/LinqSkeleton/obj/Debug/netcoreapp1.1/LinqSkeleton.pdb

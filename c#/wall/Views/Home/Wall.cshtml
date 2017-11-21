@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Wall Page";
+}
+<h1>Welcome to the Wall, @ViewBag.Name!</h1>
+<h2>@ViewBag.Messages</h2>
+
+<form action="/logout" method="post">
+    <input type="submit" value="Logout">
+</form>
+<br>
+<br>
+<form action="/message" method="post">
+    <input type="textarea" name="message">
+    <input type="submit" value="Post a Message">
+</form>
+
+<ul>
+    @foreach(var msg in ViewBag.AllMessages) {
+        <li>@msg["first_name"] - @msg["created"]</li>
+        <li>@msg["message"]</li>
+        <form action="/comment/@msg["messages_id"]" method="post">
+            <input type="textarea" name="comment">
+            <input type="submit" value="Post a Comment">
+        </form>
+        
+        foreach(var cmt in ViewBag.AllComments) {
+            if (msg["messages_id"] == cmt["messages_id"]) {
+                <li>@cmt["first_name"] said @cmt["comment"]</li>
+            }
+        }
+        <br>
+        <br>
+        <br>
+    }
+</ul>

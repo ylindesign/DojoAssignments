@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<center>
+  <h1>Welcome!</h1>
+    <form action="/register" class="register" method="post">
+      <fieldset>
+        <legend>Register</legend>
+        <ul>
+          <li>First Name: <input type="text" name="first_name"></li>
+          <li>Last Name: <input type="text" name="last_name"></li>
+          <li>Email: <input type="email" name="email"></li>          
+          <li><small>*Password should be at least 8 characters</small></li>
+          <li>Password: <input type="password" name="password"></li>
+          <li>Confirm Password: <input type="password" name="conf_pw"></li>
+          <li><input type="submit" name="register" value="Register"></li>
+        </ul>
+      </fieldset>
+    </form>
+    @ViewBag.Messages
+    <div>
+    @if (ViewBag.Status == true){
+
+        foreach(var error in ViewBag.errors)
+        {
+            //If there are any errors for a field...
+            if(@error.Errors.Count > 0)
+            {
+                // We show the first error for that field
+                <p>@error.Errors[0].ErrorMessage</p>
+            }
+        }
+
+    }
+    </div>
+
+    <form action="/login" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <ul>
+          <li>Email: <input type="text" name="email"></li>
+          <li>Password: <input type="password" name="pw"></li>
+          <li><small>Case Sensitive</small></li>
+          <li><input type="submit" name="login" value="Login"></li>
+        </ul>
+      </fieldset>
+    </form>
+
+  </center>

@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Wedding Page";
+}
+<center>
+<div class="nav">
+    <form class="logout" action="/logout" method="post">
+        <input class="logout btn-link" type="submit" value="Logout">
+    </form>
+</div>
+
+<h1>Weddings</h1>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guest</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var wedding in @ViewBag.AllWeddings) {
+        <tr>
+            <td><a href="/page/@wedding.id">@wedding.wed_one & @wedding.wed_two's Wedding</a></td>
+            <td>@wedding.date.ToString("MMMM dd, yyyy")</td>
+            <td>@wedding.Guests.Count</td>
+            <td>
+                @if (@ViewBag.UserId == wedding.userId) {
+                    <form action="/delete/@wedding.id">
+                        <input class="btn-link" type="submit" value="Delete">
+                    </form>
+                } else {
+                    bool coming = false;
+                    @foreach(var guest in wedding.Guests) {
+                        if(@guest.userId == @ViewBag.UserId) {
+                            coming = true;
+                        }
+                    }
+                    
+                    @if(coming == true){
+                        <form action="/unrsvp/@wedding.id">
+                            <input class="btn-link" type="submit" value="Un-RSVP">
+                        </form>
+                    } else {
+                        <form action="/rsvp/@wedding.id">
+                            <input class="btn-link" type="submit" value="RSVP">
+                        </form>
+                    }
+                }
+            </td>
+        </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="/addpage">New Wedding</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="messages">
+    <h1>@ViewBag.Message</h1>
+<div>
+</center>

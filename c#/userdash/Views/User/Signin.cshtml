@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Sign In Page";
+}
+<center>
+    <h1>Sign In</h1>
+
+    <form action="/signin" method="post">
+        <label for="email">Email:</label>
+        <input type="textarea" id="email" name="email">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <br>
+        <input class="submit" type="submit" value="Login">
+    </form>
+
+    <a href="/register">Don't have an account? Register >></a>
+</center>

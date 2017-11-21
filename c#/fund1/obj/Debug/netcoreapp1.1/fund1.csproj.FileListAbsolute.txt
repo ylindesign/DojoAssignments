@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/bin/Debug/netcoreapp1.1/fund1.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/bin/Debug/netcoreapp1.1/fund1.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/bin/Debug/netcoreapp1.1/fund1.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/bin/Debug/netcoreapp1.1/fund1.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/bin/Debug/netcoreapp1.1/fund1.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/obj/Debug/netcoreapp1.1/fund1.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/obj/Debug/netcoreapp1.1/fund1.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/fund1/obj/Debug/netcoreapp1.1/fund1.pdb

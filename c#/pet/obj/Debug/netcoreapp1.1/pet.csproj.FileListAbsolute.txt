@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/bin/Debug/netcoreapp1.1/pet.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/bin/Debug/netcoreapp1.1/pet.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/bin/Debug/netcoreapp1.1/pet.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/bin/Debug/netcoreapp1.1/pet.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/bin/Debug/netcoreapp1.1/pet.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/obj/Debug/netcoreapp1.1/pet.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/obj/Debug/netcoreapp1.1/pet.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/pet/obj/Debug/netcoreapp1.1/pet.pdb

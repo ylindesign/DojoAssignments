@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/bin/Debug/netcoreapp1.1/survey.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/bin/Debug/netcoreapp1.1/survey.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/bin/Debug/netcoreapp1.1/survey.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/bin/Debug/netcoreapp1.1/survey.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/bin/Debug/netcoreapp1.1/survey.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/obj/Debug/netcoreapp1.1/survey.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/obj/Debug/netcoreapp1.1/survey.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/survey/obj/Debug/netcoreapp1.1/survey.pdb

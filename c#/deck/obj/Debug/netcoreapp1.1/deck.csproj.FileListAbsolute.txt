@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/bin/Debug/netcoreapp1.1/deck.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/bin/Debug/netcoreapp1.1/deck.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/bin/Debug/netcoreapp1.1/deck.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/obj/Debug/netcoreapp1.1/deck.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/bin/Debug/netcoreapp1.1/deck.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/bin/Debug/netcoreapp1.1/deck.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/obj/Debug/netcoreapp1.1/deck.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/deck/obj/Debug/netcoreapp1.1/deck.pdb

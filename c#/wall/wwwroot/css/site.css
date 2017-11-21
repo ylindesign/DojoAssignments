@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+}
+
+fieldset {
+    width: 30%;
+    border: 1px solid black;
+}
+
+legend {
+    width: 40%;
+}

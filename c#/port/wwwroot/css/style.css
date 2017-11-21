@@ -1,0 +1,17 @@
+* {
+    font-family: sans-serif;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    margin: 0 10px;
+    display: block;
+}
+
+.section {
+    width: 380px;
+    display: inline-block;
+    /*background-color: red;*/
+    /*float: left;*/
+}

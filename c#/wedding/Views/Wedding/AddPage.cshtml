@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Add Page";
+}
+<center>
+<div class="nav">
+    <form class="logout" action="/logout" method="post">
+        <input class="logout btn-link" type="submit" value="Logout">
+    </form>
+    <a class="dashboard" href="/wedding">Dashboard</a>
+</div>
+
+<h1>Plan a Wedding</h1>
+<br>
+<form action="add" method="post">
+    <label for="wed_one">Wedder One:</label>
+    <input type="text" id="wed_one" name="wed_one">
+    <br>
+    <label for="wed_two">Wedder Two:</label>
+    <input type="text" id="wed_two" name="wed_two">
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+    <br>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <br>
+    <br>
+    <input class="submit btn-link" type="submit" value="Create">
+</form>
+<div class="messages">
+    <h1>@ViewBag.Message</h1>
+<div>
+</center>

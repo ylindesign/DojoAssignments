@@ -1,0 +1,24 @@
+/*Write all of your CSS here*/
+
+#register {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    /*float: left;*/
+}
+
+#login {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    /*float: right;*/
+}
+
+.logout {
+    float: right;
+}
+
+label {
+    display: block;
+}
+

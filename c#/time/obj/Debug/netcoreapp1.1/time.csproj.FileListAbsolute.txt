@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/bin/Debug/netcoreapp1.1/time.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/bin/Debug/netcoreapp1.1/time.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/bin/Debug/netcoreapp1.1/time.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/bin/Debug/netcoreapp1.1/time.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/bin/Debug/netcoreapp1.1/time.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/obj/Debug/netcoreapp1.1/time.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/obj/Debug/netcoreapp1.1/time.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/time/obj/Debug/netcoreapp1.1/time.pdb

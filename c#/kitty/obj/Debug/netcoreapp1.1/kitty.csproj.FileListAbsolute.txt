@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/bin/Debug/netcoreapp1.1/kitty.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/bin/Debug/netcoreapp1.1/kitty.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/bin/Debug/netcoreapp1.1/kitty.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/bin/Debug/netcoreapp1.1/kitty.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/bin/Debug/netcoreapp1.1/kitty.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/obj/Debug/netcoreapp1.1/kitty.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/obj/Debug/netcoreapp1.1/kitty.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/kitty/obj/Debug/netcoreapp1.1/kitty.pdb

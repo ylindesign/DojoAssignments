@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+    </head>
+    <body>
+        <center>
+        <h1>Hello ASP.NET Mvc!</h1>
+        @{
+        DateTime CurrentTime = DateTime.Now;
+            <h1>The current time and date:</h1>
+            <p>@CurrentTime.ToString("MM/dd/yyyy")</p>
+            <p>@CurrentTime.ToString("h:mm tt")</p>            
+
+        }
+        </center>
+    </body>
+</html>

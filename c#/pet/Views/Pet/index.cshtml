@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>DojoDachi</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <center>
+    <div id="wrapper">
+        <div id="stats">
+            <ul>
+                @if (ViewBag.Win == false && ViewBag.Lose == false) {
+                    <li>Happiness: @ViewBag.Pal.Happy</li>
+                    <li>Fullness: @ViewBag.Pal.Full</li>
+                    <li>Energy: @ViewBag.Pal.Energy</li>
+                    <li>Meals: @ViewBag.Pal.Meals</li>
+                }
+            </ul>  
+        </div>
+        <div id="display">
+            @if (ViewBag.Win == true) {
+                <h1>You Won!</h1>
+                @ViewBag.Message
+                <form action="/reset" method="post">
+                    <input type="submit" name="Reset" value="New Game">
+                </form>
+            } 
+            @if (ViewBag.Lose == true) {
+                <h1>You Lost!</h1>
+                @ViewBag.Message
+                <form action="/reset" method="post">
+                    <input type="submit" name="Reset" value="New Game">
+                </form>
+            }
+                @ViewBag.Message
+        </div>
+        <div id="buttons">
+            @if (ViewBag.Win == false && ViewBag.Lose == false) {
+            <form action="/feed" method="post">
+                <input type="submit" name="Feed" value="Feed">
+            </form>
+            <form action="/play" method="post">
+                <input type="submit" name="Play" value="Play">
+            </form>
+            <form action="/work" method="post">
+                <input type="submit" name="Work" value="Work">
+            </form>
+            <form action="/sleep" method="post">
+                <input type="submit" name="Sleep" value="Sleep">
+            </form>
+            }
+        </div>
+    </div>
+    </center>
+</body>
+</html>
+

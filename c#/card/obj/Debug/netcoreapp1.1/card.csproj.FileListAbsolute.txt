@@ -1,0 +1,8 @@
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/bin/Debug/netcoreapp1.1/card.deps.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/bin/Debug/netcoreapp1.1/card.runtimeconfig.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/bin/Debug/netcoreapp1.1/card.runtimeconfig.dev.json
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/bin/Debug/netcoreapp1.1/card.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/bin/Debug/netcoreapp1.1/card.pdb
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/obj/Debug/netcoreapp1.1/card.AssemblyInfo.cs
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/obj/Debug/netcoreapp1.1/card.dll
+/Users/Yu/Documents/code/dojoAssignments/c#/exercises/card/obj/Debug/netcoreapp1.1/card.pdb

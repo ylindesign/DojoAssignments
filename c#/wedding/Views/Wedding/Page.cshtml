@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Wedding Page";
+}
+<center>
+<div class="nav">
+    <form class="logout" action="/logout" method="post">
+        <input class="logout btn-link" type="submit" value="Logout">
+    </form>
+    <a class="dashboard" href="/wedding">Dashboard</a>
+</div>
+
+<div id="container">
+    <div id="left">
+    <h1>@ViewBag.Wedding.wed_one & @ViewBag.Wedding.wed_two's Wedding</h1>
+    <br>
+    <h2>Date: @ViewBag.Wedding.date</h2>
+    <h3>Guests:</h3>
+        @foreach (var guest in @ViewBag.Guests) {
+            <h4>@guest.User.first_name @guest.User.last_name</h4>
+        }
+    </div>
+
+    <div id="right">
+    <iframe width="400" height="350" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/search?q=@ViewBag.Wedding.address&key=AIzaSyBiiXmCD9qRwo4z0xPcB2hSLAVd2dc8MmU" allowfullscreen></iframe>
+    </div>
+</div>
+</center>
+
