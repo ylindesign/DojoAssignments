@@ -1,0 +1,21 @@
+*{
+	font-family: sans-serif;
+}
+
+ul li {
+	list-style: none;
+	text-align: left;
+}
+
+.messages {
+	text-align: center;
+}
+
+.secret_box {
+	width: 500px;
+	height: 100px;
+}
+
+fieldset {
+	width: 400px;
+}

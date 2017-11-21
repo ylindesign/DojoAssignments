@@ -1,5 +1,9 @@
 Django Process
 
+cd ~/Documents/coding/
+cd ~/Desktop/DojoAssignments/myEnvironments/
+cd ~/desktop/DojoAssignments/python/django/
+
 1. django-admin startproject projectname
 
 2. cd projectname
@@ -15,21 +19,22 @@ Django Process
 7. projname/projname/settings.py
 	INSTALLED_APPS = [
 		'apps.appname',
+		'django_extensions',
 		]
 
 8. projname/projname/urls.py
 	urlpatterns = [
-		url(r'^', include('apps.appname.urls'))
+		url(r'^', include('apps.appname.urls', namespace='appname'))
 		]
 
-9. projname/appname:
+9. projname/apps/appname:
 	touch urls.py
   
 from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index)
+	url(r'^$', views.index, name = 'index'),
 ]
 
 ***when you add more links for clients, add to urlpatterns (example):
@@ -39,7 +44,11 @@ urlpatterns = [
 
 
 10. apps/appname/views.py
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+from django.core.urlresolvers import reverse
+
+from django.contrib import messages
+from .models import MODELCLASS
 
 def index(request):
 	return render(request, 'appname/index.html')
@@ -53,9 +62,40 @@ def index(request):
 	      <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
 	      --->
 
+12. Set up models.py
+
+
+python manage.py graph_models -a -o myapp_models.png
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 "localhost:8000"
+
+SHELL
+python manage.py shell
+	from apps.{{app_name}}.models import {{table_name}}
+		Note: be sure to replace anything with {{}}, including the braces with the correct project and app names for your project.
+
+// Create table
+course = Course.objects.create(name="Python",description="Learn how to write Python like a boss.")
+course
+	# your result will look like:
+	# <Course: Course object>
+
+// Get all items in table
+courses = Course.objects.all()
+courses
+	# your output will be:
+	# <QuerySet [<Course: Course object>]>
+
+// View the data
+for course in courses:
+	print course.name, course.description
+		# output should be:
+		# Python Learn how to write Python like a boss.
+
+
+
 __________________
 
 FORMS

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books</title>
+</head>
+<body>
+	<form action="/show" method="post">
+		{% csrf_token %}
+		<label for="title">Title:</label>
+			<input type="type" name="title">
+		<label for="author">Author:</label>
+			<input type="type" name="author">
+		<label for="dates">Published Date:</label>
+			<input type="date" name="dates">
+		<label for="category">Category</label>
+			<select name="category">
+				<option value="Adventure">Adventure</option>
+				<option value="Suspense">Suspense</option>
+				<option value="Romance">Romance</option>
+				<option value="Comedy">Comedy</option>
+			</select>
+		<input type="submit" name="submit">
+	</form>
+
+	{% for thing in bookie %}
+	<p>Title: {{thing.title}}</p>
+	<p>Author: {{thing.author}}</p>
+	<p>Published Date: {{thing.dates}}</p>
+	<p>Category: {{thing.category}}</p>
+	<p>Inprint: {{thing.inprint}}</p>
+	<p>Newprint: {{thing.newprint}}</p>
+	<hr>
+	{% endfor %}
+</body>
+</html>

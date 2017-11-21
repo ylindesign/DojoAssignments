@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wishes!</title>
+	{% load staticfiles %}
+	<!-- The line above tells Django to be ready to listen for static files -->
+	<link rel="stylesheet" href="{% static 'css/index.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<h1>Hello, {{ request.session.name }}!</h1>
+	<h3>Your id is {{ request.session.id }}</h3>
+	{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					{{ message }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	<a href="{% url 'login:logout' %}">Logout</a>
+	
+	<br>
+	<br>
+	Your Wishlist
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Added By</th>
+			<th>Date Added</th>
+			<th>Action</th>
+		</tr>
+		{% for wish in user_wishes %}
+				<tr>
+					<td><a href="/wish/item/{{ wish.id }}">{{ wish.item }}</a></td>
+					<td>{{ wish.user.name }}</td>
+
+					<td>{{ wish.created_at.date }}</td>
+			{% if wish.user.id == request.session.id %}
+					<td><a href="/wish/delete/{{ wish.id }}">Delete</a></td>
+			{% else %}
+					<td><a href="/wish/remove/{{ wish.id }}/{{ user.id }}">Remove from my Wishlist</a></td>
+			{% endif %}
+				</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<br>
+	<br>
+	Other Users' Wishlists
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Added By</th>
+			<th>Date Added</th>
+			<th>Action</th>
+		</tr>
+		{% for wish in wished_by %}
+			<tr>
+				<td><a href="/wish/item/{{ wish.id }}">{{ wish.item }}</a></td></td>
+				<td>{{ wish.user.name }}</td>
+				<td>{{ wish.created_at }}</td>
+				<td><a href="/wish/copy/{{ wish.id }}/{{ wish.item }}">Add to my Wishlist</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<br>
+	<a href="{% url 'wish:create' %}">Add Item</a>
+	
+</body>
+</html>
+
+
+
+
+
+

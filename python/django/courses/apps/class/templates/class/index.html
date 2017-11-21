@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>Course Name</th>
+			<th>Description</th>
+			<th>Date Added</th>
+			<th>Actions</th>
+		</tr>
+		{% if course %}
+		{% for thing in course %}
+		<tr>
+			<td>{{thing.id}}</td>
+			<td>{{thing.name}}</th>
+			<td>{{thing.description}}</td>
+			<td>{{thing.created_at}}</td>
+			<td><a href="/destroy/{{thing.id}}">remove</a></td>
+		</tr>
+		{% endfor %}
+		{% endif %}
+	</table>
+
+	<form action="/process" method="post">
+		{% csrf_token %}
+		<label for="name">Name:</label>
+			<input type="text" name="name">
+		<label for="description">Description:</label>
+			<input type="text" name="description">
+		<input type="submit" name="submit">
+	</form>
+
+</body>
+</html>
